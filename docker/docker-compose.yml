@@ -5,6 +5,4 @@ services:
       - ../pb_data:/pb/pb_data
       - ../pb_hooks:/pb/pb_hooks
       - ../pb_migrations:/pb/pb_migrations
-    ports:
-      - "80"   # host portu belirtilmedi → Docker rastgele bir port atar
     restart: unless-stopped
