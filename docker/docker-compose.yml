@@ -6,5 +6,5 @@ services:
       - ../pb_hooks:/pb/pb_hooks
       - ../pb_migrations:/pb/pb_migrations
     ports:
-      - "80:8090"
+      - "8090:8090"
     restart: unless-stopped
