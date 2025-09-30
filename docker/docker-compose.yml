@@ -1,5 +1,5 @@
 services:
-  pocketbase:
+  pocket-base:
     build: .
     volumes:
       - ../pb_data:/pb/pb_data
