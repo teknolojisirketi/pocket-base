@@ -12,7 +12,7 @@ RUN unzip /tmp/pb.zip -d /pb/
 
 WORKDIR /pb
 
-EXPOSE 8091
+EXPOSE 80
 
 # start PocketBase
-CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:8091"]
+CMD ["/pb/pocketbase", "serve", "--http=0.0.0.0:80"]
