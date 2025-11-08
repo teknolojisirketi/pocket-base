@@ -1,8 +1,19 @@
+version: "3.9"
+
 services:
   pocket-base:
-    build: .
+    container_name: ${POCKETBASE_CONTAINER_NAME}
+    build:
+      context: .
+      args:
+        PB_VERSION: ${PB_VERSION}
     volumes:
       - ../pb_data:/pb/pb_data
       - ../pb_hooks:/pb/pb_hooks
       - ../pb_migrations:/pb/pb_migrations
+    ports:
+      - "${POCKETBASE_PORT}:${POCKETBASE_PORT}"
+    environment:
+      - POCKETBASE_URL=${POCKETBASE_URL}
+      - POCKETBASE_PORT=${POCKETBASE_PORT}
     restart: unless-stopped
